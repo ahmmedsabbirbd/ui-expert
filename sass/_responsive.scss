@@ -1,50 +1,41 @@
 /***********************************
 MEDIA QUERIES
 ***********************************/
+@media only screen and (max-width: 1650px) {
+
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header {
+
+        .media {
+            right: -27%;
+        }
+    }
+}/* 1650 */
+
 @media only screen and (max-width: 1460px) {
 
     /***********************************
     HEADER STYLES
     ***********************************/
     .header {
-
-        .navbar {
-
-            .navbar-collapse {
-
-                .navbar-nav-right {
-                    margin-left: 40px;
-                }
-            }
+        
+        .media {
+            right: -32%;
         }
     }
 }/* 1460 */
 
 @media only screen and (max-width: 1366px) {
 
-    .container-fluid {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
     /***********************************
     HEADER STYLES
     ***********************************/
     .header {
 
-        .navbar {
-
-            .container-fluid {
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-
-            .navbar-collapse {
-
-                .navbar-nav-right {
-                    margin-left: 30px;
-                }
-            }
+        .media {
+            right: -42%;
         }
     }
 
@@ -61,22 +52,16 @@ MEDIA QUERIES
 
     h1, .h1 { font-size: 55px; line-height: 67px; }
 
-    .container-fluid {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
     /***********************************
     HEADER STYLES
     ***********************************/
     .header {
 
-        .navbar {
+        .media {
+            right: -75%;
+        }
 
-            .container-fluid {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
+        .navbar { 
 
             .navbar-collapse {
 
@@ -86,16 +71,11 @@ MEDIA QUERIES
 
                         > li {
 
-                            &:nth-child(1), &:nth-child(2) {
+                            &:nth-child(1), &:nth-child(2), &:nth-child(3) {
                                 display: none;
                             }
                         }
-                    }
-                }
-
-                .navbar-nav-right {
-                    margin-right: 0;
-                    margin-left: 20px;
+                    }  
                 }
             }
         }
@@ -143,6 +123,11 @@ MEDIA QUERIES
     ***********************************/
     .header {
 
+        .media {
+            top: -85%;
+            right: -100%;
+        }
+
         .navbar {
 
             .navbar-collapse {
@@ -157,15 +142,11 @@ MEDIA QUERIES
                             padding-left: 10px;
                             padding-right: 10px;
 
-                            &:nth-child(3) {
+                            &:nth-child(4) {
                                 display: none;
                             }
                         }
                     }
-                }
-
-                .navbar-nav-right {
-                    margin-left: 15px;
                 }
             }
         }
@@ -184,6 +165,69 @@ MEDIA QUERIES
 
 }/* 991 */
 
+@media only screen and (max-width: 870px) {
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header {
+
+        .media {
+            top: -85%;
+            right: -120%;
+        } 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-nav-right) {
+
+                        > li {
+
+                            &:nth-child(5) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
+}/* 870 */
+
+@media only screen and (max-width: 815px) {
+    /***********************************
+    HEADER STYLES
+    ***********************************/
+    .header {
+
+        .media {
+            top: -85%;
+            right: -150%;
+        } 
+
+        .navbar {
+
+            .navbar-collapse {
+
+                .navbar-nav {
+
+                    &:not(.navbar-nav-right) {
+
+                        > li {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
+}/* 815 */
+
 @media only screen and (max-width: 767px) {
 
     h1, .h1 { font-size: 40px; line-height: 52px; }
@@ -198,28 +242,13 @@ MEDIA QUERIES
     .header {
         padding: 13.5px 0;
 
-        .navbar {
-
-            .navbar-collapse {
-
-                .navbar-nav {
-
-                    &:not(.navbar-nav-right) {
-
-                        > li {
-
-                            &:nth-child(4) {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
+        .media {
+            right: -180%;
         }
     }
 
     .header_gutter {
-        height: 80px;
+        height: 66px;
     }
 
     /***********************************
@@ -243,35 +272,20 @@ MEDIA QUERIES
         }
     }
 
-}/* 767 */
+}/* 767 */ 
+
+
 
 @media only screen and (max-width: 680px) {
-
     /***********************************
     HEADER STYLES
     ***********************************/
     .header {
 
-        .navbar {
-
-            .navbar-collapse {
-
-                .navbar-nav {
-
-                    &:not(.navbar-nav-right) {
-
-                        > li {
-
-                            &:nth-child(5) {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
- 
+        .media { 
+            right: -200%;
+        }  
+    } 
 
 }/* 680 */
 
@@ -299,27 +313,9 @@ MEDIA QUERIES
     ***********************************/
     .header {
 
-        .navbar {
-
-            .navbar-collapse {
-
-                .navbar-nav {
-
-                    &:not(.navbar-nav-right) {
-                        display: none;
-                    }
-                }
-
-                .navbar-nav-right {
-
-                    > li {
-
-                        &.social {
-                            display: none;
-                        }
-                    }
-                }
-            }
+        .media {
+            top: -130%;
+            right: -240%;
         }
     }
   
