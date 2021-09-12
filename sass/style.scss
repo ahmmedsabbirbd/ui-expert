@@ -38,13 +38,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
 	font: 400 18px/28px $robo;
 }
-
-h1, .h1 { font-size: 60px; line-height: 72px; }
-h2, .h2 { font-size: 48px; line-height: 62px; }
+ 
+h1, .h1 { font-size: 78px; line-height: 109px; }
+h2, .h2 { font-size: 40px; line-height: 50px; }
 h3, .h3 { font-size: 36px; line-height: 52px; }
 h4, .h4 { font-size: 30px; line-height: 42px; }
-h5, .h5 { font-size: 24px; line-height: 32px; }
-h6, .h6 { font-size: 18px; line-height: 30px; }
+h5, .h5 { font-size: 22px; line-height: 28px; }
+h6, .h6 { font-size: 20px; line-height: 25px; }
 
 h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -144,7 +144,7 @@ select, textarea {
 .entry-title {
 
 	.sub-title {
-		color: #60687B;
+		color: #3D37F1;
 		display: block;
 	}
 
@@ -165,16 +165,8 @@ select, textarea {
 
 	.white {
 		color: $white;
-	}
-
-	.red {
-		color: red;
-	}
-
-	.gray {
-		color: #60687B;
-	}
-
+	} 
+ 
 	.black {
 		color: $black;
 	}
@@ -234,6 +226,10 @@ HEADER STYLES
 ***********************************/
 .scroll-down .header {
     @include transform(translate3d(0, -100%, 0));
+
+    .media {
+    	@include transform(translate3d(0, -100%, 0));
+    }
 }
 
 .header {
@@ -256,6 +252,8 @@ HEADER STYLES
     	right: -16%;
 		z-index: -1;
 		position: absolute;
+	    @include transition(all 0.5s ease); 
+
 
 		img {
 			height: auto;
@@ -616,3 +614,7 @@ FOOTER STYLES
 
 
 @import 'responsive';
+
+
+
+
