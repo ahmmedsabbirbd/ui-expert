@@ -232,6 +232,29 @@ HEADER STYLES
     }
 }
 
+.scroll-up .header {
+
+	.media {
+    	@include transform(translate3d(0, -100%, 0));
+	}
+
+    .navbar { 
+
+    	.navbar-collapse { 
+
+    		.navbar-nav { 
+
+    			> li {  
+
+    				> a {
+    					color: $black; 
+    				}
+    			}
+    		}
+    	}
+    }
+}
+
 .header {
     top: 0;
     left: 0;
@@ -312,7 +335,7 @@ HEADER STYLES
     				&.active, &:hover, &:focus {
 
     					> a {
-    						color: $black;
+    						color: $secondary;
     					}
     				}
     			}
@@ -471,6 +494,145 @@ HEADER STYLES
 /***********************************
 HOME STYLES
 ***********************************/
+.banner {
+	z-index: 1;
+	padding: 250px 0;
+	position: relative;
+
+	.entry-title {
+		max-width: 735px;
+
+		.title {
+			margin-bottom: 20px;
+
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		.btn {
+
+			i {
+				margin-right: 20px;
+				display: inline-block;
+			}
+		}
+	}
+
+	.media {
+		right: 6%;
+		z-index: -1;
+		position: absolute;
+		top: calc(50% - 220px);
+
+		img {
+
+		}
+	}
+}
+
+.provide-service {
+	padding: 80px 0 120px;
+
+	.minus {
+		margin-bottom: -20px;
+	}
+
+	.entry-title {
+		margin-bottom: 50px;
+
+		.sub-title {
+			margin-bottom: 15px;
+		}
+
+		.title {
+			margin-bottom: 20px;
+		}
+
+		p {
+			margin: 0;
+
+			+ p {
+				margin-top: 15px;
+			}
+
+		}
+	}
+}
+
+.service-item {
+	margin-bottom: 20px;
+	padding: 188px 20px 45px;
+	height: calc(100% - 20px);
+	box-shadow: 0px 40px 40px rgba(197, 195, 249, 0.15);
+
+
+	.icon {
+		margin-bottom: 35px;
+
+		i {
+			color: $white;
+			font-size: 100px;
+		}
+	}
+
+	.text {
+
+		.title {
+			color: $white;
+			margin-bottom: 10px;
+		}
+
+		p {
+			margin: 0;
+			color: $white;
+
+			+ p  {
+				margin-top: 10px;
+			}
+		}
+
+		.btn {
+			font-size: 15px;
+			line-height: 20px;
+			margin-top: 25px;
+			font-family: $robo;
+			border: 2px solid $white;
+			@include border-radius(23px);
+
+			&:hover, &:focus {
+				color: $black;
+				background: $white;
+			}
+		}
+	}
+}
+
+.about-uiexpert {
+	z-index: 1;
+	padding: 300px 0;
+	position: relative;
+
+	.media {
+		left: 9%;
+		z-index: -1;
+		position: absolute;
+	}
+
+	.entry-title {
+		margin-left: 54%;
+
+		.title {
+			margin-bottom: 10px;
+		}
+
+		p {
+
+		}
+	}
+
+}
 
 /***********************************
 FOOTER STYLES
@@ -615,6 +777,4 @@ FOOTER STYLES
 
 @import 'responsive';
 
-
-
-
+ 
