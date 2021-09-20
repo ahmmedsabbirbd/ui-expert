@@ -144,6 +144,44 @@
        	}
     });
 
+    /*/// init Isotope ///*/
+	var $grid = $('.product-filter').isotope({
+		itemSelector: '.item'
+	});
+
+	var filters = {};    /// store filter for each group
+
+	$('.product-filter-button').on( 'click', '.button', function( event ) {
+		var $button = $( event.currentTarget );
+		var $buttonGroup = $button.parents('.filter-items');
+		var filterGroup = $buttonGroup.attr('data-filter-group');
+		filters[ filterGroup ] = $button.attr('data-filter');
+		var filterValue = concatValues( filters );
+		$grid.isotope({ filter: filterValue });
+	});
+
+	
+	$('.filter-items').each( function( i, buttonGroup ) {
+		var $buttonGroup = $( buttonGroup );
+
+		$buttonGroup.on( 'click', 'button', function( event ) {
+		$buttonGroup.find('.active').removeClass('active');
+			var $button = $( event.currentTarget );
+			$button.addClass('active');
+		});
+	}); /// change is-checked class on buttons
+
+
+	
+	function concatValues( obj ) {
+		var value = '';
+		for ( var prop in obj ) {
+		  value += obj[ prop ];
+		}
+		return value;
+	}  // flatten object by concatting values
+ 
+
     /*** History Slider */
 	var historytime = 5;
 	var $historybar,
@@ -272,23 +310,26 @@
 	    });
 	};
 
+	/** parallax js*/
+	var _parallax = $(".parallax"),
+      _speed = -0.5;
 
-	/*** Masonry */
-    function masonryGrid(){
-        var $grid = $('.masonry');
-        // initialize
-        $grid.masonry({
-            itemSelector: '.item',
-            columnWidth: '.item',
-            horizontalOrder: false,
-            // isAnimated: true,
-            // percentPosition: true,
-        });
+	window.onscroll = function(){
+	    [].slice.call(_parallax).forEach(function(el,i){
+	      var rect = el.getBoundingClientRect();
+	      var windowYOffset = window.pageYOffset,
+	          elBackgrounPos = "0 " + (windowYOffset * _speed) + "px";
+	      
+	      el.style.backgroundPosition = elBackgrounPos;
 
-        $grid.masonry('reloadItems');
-        $grid.masonry('layout');
-    }
-    masonryGrid();
+	    });
+	};
+
+	/*** Number Counter */
+	$('.counter').counterUp({
+		delay: 10,
+		time: 1000
+	});
 
     /*** Image to SVG */
 	$('img.svg').each(function(){
