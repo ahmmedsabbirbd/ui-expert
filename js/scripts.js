@@ -289,6 +289,17 @@
 
 	/*** Audio Player js */
     var isPlaying = false;
+
+    $('.a').each(
+
+    	function(i){
+	        i++;
+	        $(this).addClass('a_number'+i);
+
+	    	console.log($(this).context.className);
+	    }
+    );
+
     
     function autoplay() {
         $('.audio-controls').each(function(i){
