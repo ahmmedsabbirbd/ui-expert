@@ -633,6 +633,40 @@ HOME STYLES
 	}
 }
 
+.uiexpert-audio {
+
+	.audio-play {
+		margin-right: 20px;
+
+		.btn {
+			padding: 0;
+			width: 60px;
+			height: 60px;
+
+			span {
+				color: $white;
+				font-size: 25px;
+				line-height: 56px;
+			}
+		}
+	}
+
+	.audio-controls {
+
+		.progress {
+			width: 57px;
+			height: 5px;
+			margin-right: 20px;
+			background: #707070;
+
+			.progress-current {
+				background: red;
+			}
+		}
+	}
+}
+
+
 .our-portfolio {
 	padding: 100px 0;
 
@@ -727,7 +761,6 @@ HOME STYLES
 
 	.entry-title {
 		margin-bottom: 40px;
-		padding-bottom: 80px;
 
 		.title {
 			margin-bottom: 10px;
@@ -906,6 +939,146 @@ HOME STYLES
 	}
 }
 
+.our-workflow {
+	padding: 100px 0;
+	position: relative;
+
+	.minus {
+		margin-bottom: -25px;
+	}
+
+	.media {
+		left: -180px;
+		max-width: 720px;
+		position: absolute;
+	}
+
+	.content { 
+
+		.entry-title {
+			margin-bottom: 30px;
+
+			.title {
+				font-weight: 700;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.workflow-items {
+
+	.workflow-item {
+		width: 50%;
+		margin-bottom: 25px;
+
+		.number {
+			width: 58px;
+			height: 58px;
+			margin-right: 25px;
+			@include border-radius(500px);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.text {
+			max-width: 142px;
+
+			.title {
+				color: #747474;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 25px;
+				margin-bottom: 5px;
+				font-family: $robo;
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+}
+
+.our-blog {
+	padding: 100px 0;
+
+	.minius {
+		margin-bottom: -30px;
+	}
+
+	.entry-title {
+		max-width: 530px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+
+		.title {
+			margin-bottom: 10px;
+		} 
+	}
+}
+
+.blog-item { 
+	display: block;
+	margin-bottom: 30px;
+	box-shadow: 0px 40px 40px rgba(197, 195, 249, 0.15); 
+
+	.media {  
+
+		img { 
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.text {
+		padding: 20px 38px 50px;
+	 
+
+		.title {
+			color: $black;
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 26px;
+			margin-bottom: 15px;
+		}
+
+		p {
+			color: #747474;
+			font-size: 15px;
+			margin-bottom: 10px;
+		}
+
+		.btn {
+			padding: 0;
+			color: #3D37F1;
+			font-size: 35px;
+			background: transparent;
+		}
+	}
+}
+
+
+.brand-item {
+
+	.media {
+		height: auto;
+		max-width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
 /***********************************
 FOOTER STYLES
 ***********************************/

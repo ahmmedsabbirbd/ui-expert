@@ -841,6 +841,29 @@ HOME STYLES
 .about-uiexpert .entry-title .title {
   margin-bottom: 10px;
 }
+.uiexpert-audio .audio-play {
+  margin-right: 20px;
+}
+.uiexpert-audio .audio-play .btn {
+  padding: 0;
+  width: 60px;
+  height: 60px;
+}
+.uiexpert-audio .audio-play .btn span {
+  color: #FFF;
+  font-size: 25px;
+  line-height: 56px;
+}
+.uiexpert-audio .audio-controls .progress {
+  width: 57px;
+  height: 5px;
+  margin-right: 20px;
+  background: #707070;
+}
+.uiexpert-audio .audio-controls .progress .progress-current {
+  background: red;
+}
+
 .our-portfolio {
   padding: 100px 0;
 }
@@ -917,7 +940,6 @@ HOME STYLES
 }
 .our-success .entry-title {
   margin-bottom: 40px;
-  padding-bottom: 80px;
 }
 .our-success .entry-title .title {
   margin-bottom: 10px;
@@ -1075,6 +1097,128 @@ HOME STYLES
   line-height: 36px;
 }
 
+.our-workflow {
+  padding: 100px 0;
+  position: relative;
+}
+.our-workflow .minus {
+  margin-bottom: -25px;
+}
+.our-workflow .media {
+  left: -180px;
+  max-width: 720px;
+  position: absolute;
+}
+.our-workflow .content .entry-title {
+  margin-bottom: 30px;
+}
+.our-workflow .content .entry-title .title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.workflow-items .workflow-item {
+  width: 50%;
+  margin-bottom: 25px;
+}
+.workflow-items .workflow-item .number {
+  width: 58px;
+  height: 58px;
+  margin-right: 25px;
+  border-radius: 500px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.workflow-items .workflow-item .text {
+  max-width: 142px;
+}
+.workflow-items .workflow-item .text .title {
+  color: #747474;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+}
+.workflow-items .workflow-item .text p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.our-blog {
+  padding: 100px 0;
+}
+.our-blog .minius {
+  margin-bottom: -30px;
+}
+.our-blog .entry-title {
+  max-width: 530px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.our-blog .entry-title .title {
+  margin-bottom: 10px;
+}
+
+.blog-item {
+  display: block;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 40px 40px rgba(197, 195, 249, 0.15);
+          box-shadow: 0px 40px 40px rgba(197, 195, 249, 0.15);
+}
+.blog-item .media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog-item .text {
+  padding: 20px 38px 50px;
+}
+.blog-item .text .title {
+  color: #5A5454;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.blog-item .text p {
+  color: #747474;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.blog-item .text .btn {
+  padding: 0;
+  color: #3D37F1;
+  font-size: 35px;
+  background: transparent;
+}
+
+.brand-item .media {
+  height: auto;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.brand-item .media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /***********************************
 FOOTER STYLES
 ***********************************/
@@ -1213,6 +1357,30 @@ MEDIA QUERIES
   .about-uiexpert {
     padding: 280px 0;
   }
+
+  .our-portfolio {
+    padding: 80px 0;
+  }
+
+  .our-success {
+    padding: 80px 0;
+  }
+
+  .what-say {
+    padding: 120px 0;
+  }
+
+  .skills {
+    padding: 80px 0;
+  }
+
+  .our-workflow {
+    padding: 80px 0;
+  }
+
+  .our-blog {
+    padding: 80px 0;
+  }
 }
 /* 1460 */
 @media only screen and (max-width: 1366px) {
@@ -1268,7 +1436,7 @@ MEDIA QUERIES
   }
 
   .about-uiexpert {
-    padding: 250px 0;
+    padding: 180px 0;
   }
   .about-uiexpert .media {
     position: inherit;
@@ -1276,6 +1444,44 @@ MEDIA QUERIES
   }
   .about-uiexpert .entry-title {
     margin-left: 0;
+  }
+
+  .our-portfolio {
+    padding: 50px 0;
+  }
+  .our-portfolio .content {
+    padding-bottom: 50px;
+  }
+
+  .product-gallery .item a .media {
+    width: 100%;
+  }
+
+  .our-success {
+    padding: 50px 0;
+  }
+
+  .what-say {
+    padding: 100px 0;
+  }
+  .what-say .entry-title {
+    padding-bottom: 150px;
+  }
+
+  .skills {
+    padding: 50px 0;
+  }
+
+  .skill-item {
+    width: 100%;
+  }
+
+  .our-workflow {
+    padding: 50px 0;
+  }
+
+  .our-blog {
+    padding: 50px 0;
   }
 
   /***********************************
@@ -1353,7 +1559,12 @@ MEDIA QUERIES
   }
 
   .about-uiexpert {
-    padding: 200px 0;
+    padding: 150px 0;
+  }
+
+  .product-filter-button .filter-items li .btn {
+    font-size: 20px;
+    line-height: 26px;
   }
 
   /***********************************
@@ -1445,6 +1656,13 @@ MEDIA QUERIES
 
   .about-uiexpert {
     padding: 100px 0;
+  }
+
+  .skill-item {
+    padding: 50px 30px;
+  }
+  .skill-item .icon i {
+    font-size: 60px;
   }
 
   /***********************************
@@ -1542,6 +1760,25 @@ MEDIA QUERIES
 
   .about-uiexpert {
     padding: 50px 0;
+  }
+
+  .skill-item .text {
+    max-width: 100%;
+  }
+
+  .our-workflow .media {
+    display: none;
+  }
+
+  .workflow-items .workflow-item {
+    width: 100%;
+  }
+  .workflow-items .workflow-item .number {
+    width: 50px;
+    height: 50px;
+  }
+  .workflow-items .workflow-item .text {
+    max-width: 100%;
   }
 
   /***********************************

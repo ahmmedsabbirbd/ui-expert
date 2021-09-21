@@ -172,7 +172,6 @@
 	}); /// change is-checked class on buttons
 
 
-	
 	function concatValues( obj ) {
 		var value = '';
 		for ( var prop in obj ) {
@@ -182,116 +181,79 @@
 	}  // flatten object by concatting values
  
 
-    /*** History Slider */
-	var historytime = 5;
-	var $historybar,
-		$historyslick,
-		historyisPause,
-		historytick,
-		historypercentTime;
+    /*** Brand Slider */
+	var $brandsslick;
 
-	$historyslick = $('.history-slider');
+	$brandsslick = $('.brands-slider');
 
-	$historyslick.slick({
+	$brandsslick.slick({
+		autoplay: true,
 	  	speed: 300,
 	  	dots: false,
 	  	arrows: false,
-	  	infinite: true,
-	  	initialSlide: 2,
-	  	slidesToShow: 4,
-	  	centerMode: true,
-	  	centerPadding: '190px 0px 0px',
-	  	slidesToScroll: 1,
+	  	infinite: true, 
+	  	slidesToShow: 5,  
 	  	responsive: [
 		    {
 		      	breakpoint: 1367,
 		      	settings: {
-		        	slidesToShow: 3,
-		        	initialSlide: 1,
-		        	slidesToScroll: 1,
-		        	centerPadding: '170px 0 0',
+		        	slidesToShow: 4 
 		      	}
 		    },
 		    {
 		      	breakpoint: 992,
 		      	settings: {
-		        	slidesToShow: 2,
-		        	initialSlide: 1,
-		        	slidesToScroll: 1,
-		        	centerPadding: '150px 0 0',
+		        	slidesToShow: 3
 		      	}
 		    },
 		    {
-		      	breakpoint: 992,
+		      	breakpoint: 768,
 		      	settings: {
-		        	slidesToShow: 2,
-		        	initialSlide: 1,
-		        	slidesToScroll: 1,
-		        	centerPadding: '120px 0 0',
+		        	slidesToShow: 2
 		      	}
-		    },
+		    } ,
 		    {
 		      	breakpoint: 576,
 		      	settings: {
-		        	slidesToShow: 1,
-		        	initialSlide: 0,
-		        	slidesToScroll: 1,
-		        	centerPadding: '130px 0 0',
+		        	slidesToShow: 1
+		      	}
+		    } 
+	  	]
+	}); 
+
+    /*** blog Slider */
+	var $blogslick;
+
+	$blogslick = $('.blog-slider');
+
+	$blogslick.slick({
+		autoplay: true,
+	  	speed: 300,
+	  	dots: false,
+	  	arrows: false,
+	  	infinite: true, 
+	  	slidesToShow: 3,  
+	  	responsive: [ 
+		    {
+		      	breakpoint: 992,
+		      	settings: {
+		        	slidesToShow: 3
 		      	}
 		    },
 		    {
-		      	breakpoint: 481,
+		      	breakpoint: 768,
 		      	settings: {
-		        	slidesToShow: 1,
-		        	initialSlide: 0,
-		        	slidesToScroll: 1,
-		        	centerPadding: '60px 0 0',
+		        	slidesToShow: 2
 		      	}
-		    }
+		    } ,
+		    {
+		      	breakpoint: 576,
+		      	settings: {
+		        	slidesToShow: 1
+		      	}
+		    } 
 	  	]
-	});
-
-	$historybar = $('.history_slider_control .slider-progress .progress');
- 
-	$historyslick.on({
-		mouseenter: function() {
-			historyisPause = true;
-		},
-		mouseleave: function() {
-			historyisPause = false;
-		}
-	})
-
-	function startProgressbar() {
-		resetProgressbar();
-			historypercentTime = 0;
-			historyisPause = false;
-			historytick = setInterval(interval, 10);
-		}
-
-	function interval() {
-		if( historyisPause === false ) 
-		{
-			historypercentTime += 1 / (historytime+0.1);
-			$historybar.css({
-				width: historypercentTime+"%"
-			});
-
-			if(historypercentTime >= 100)
-			{
-				$historyslick.slick('slickNext');
-				startProgressbar();
-			}
-		}
-	}
-
-	function resetProgressbar() {
-		$historybar.css({
-			width: 0+'%' 
-		});
-		clearTimeout(historytick);
-	}
-	startProgressbar();
+	}); 
 
    	
 	/*** Rellax */
@@ -324,6 +286,51 @@
 
 	    });
 	};
+
+	/*** Audio Player js */
+    var isPlaying = false;
+    
+    function autoplay() {
+        $('.audio-controls').each(function(i){
+            i++;
+            $(this).addClass('audio-controls-'+i)
+        });
+
+        $('audio').each(function(i){
+            i++;
+            $(this).addClass('rs-audio-'+i)
+        });
+
+        $('.play-btn').each(function(i){
+            i++;
+           
+            $(this).addClass('play-btn-'+i).click( function(e) {
+                $audio = $(this).attr('href');
+                if (isPlaying) {
+                    $(this).children('.playing').show();
+                    $('.rs-audio-'+i)[0].pause();
+                    $(this).children('.pausing').hide();
+
+                } else {
+                    $('.rs-audio-'+i)[0].play();
+                    $(this).children('.playing').hide();
+                    $(this).children('.pausing').show();
+                }
+            
+                isPlaying = !isPlaying;
+            });
+
+
+            setInterval(function(){
+                $('.audio-controls-'+ i +' .progress .progress-current').css({ width: $('.rs-audio-'+i)[0].currentTime / $('.rs-audio-'+i)[0].duration * 100 + '%' });
+            }, 1000/60);
+
+        })
+    }
+
+    $(document).ready(function() {
+        autoplay();
+    });
 
 	/*** Number Counter */
 	$('.counter').counterUp({
